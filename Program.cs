@@ -12,16 +12,20 @@ namespace LINQ_AtoZ
         static void Main(string[] args)
         {
             EmployeeDBContext empdb = new EmployeeDBContext();
-            IEnumerable<tblEmployee> emplyee= empdb.tblEmployees.Where(x => x.Gender == "Male");
+            IEnumerable<string> emplyee= empdb.tblEmployees.Select(x => x.Gender); // this will only select that column gender 
+
+            var employees = empdb.tblEmployees.Select(x => new {FirstName = x.Name , Gender = x.Gender , Department = x.departmentId });  // using anonymuous type 
 
             foreach (var emp in emplyee)
             {
-                Console.WriteLine("Employe Name {0} ", emp.Name);
-
+                Console.WriteLine("Employe Name : {0} ", emp);
             }
 
+            foreach (var emp in employees)
+            {
+                Console.WriteLine("Employe Name :  {0} , Gender : {1} , Department :  {2}  ", emp.FirstName , emp.Gender , emp.Department);
+            }
 
-            
             Console.ReadLine();
         }
 
