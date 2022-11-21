@@ -10,27 +10,49 @@ namespace LINQ_AtoZ
     public class Program
     {
         static void Main(string[] args)
-        {          
-            string strName = "jordy";
-            string result = strName.ChangeFirstLetterCase();
+        {
+            //Linq Aggregate Functions
+            //MIN, MAX, SUM,COUNT,AVERAGE & AGGREGATE
 
-            Console.WriteLine("After using Extension method , Name is  {0} ", result);
+            int[] Numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
+            //SmallestNumber
+            int smallestNumber = Numbers.Min();
+            int smallestEvenNumber = Numbers.Where(x => x % 2 == 0).Min(); 
 
+            //Largest Number 
+            int largestNumber = Numbers.Max();
+            int largetstEvenNumber = Numbers.Where(x=>x % 2 == 0).Max();
+
+            //Sum of all numbers 
+            int sumOfAllNumbers = Numbers.Sum(x => x);
+            int sumOfEvenNumbers = Numbers.Where(x=>x%2 == 0).Sum();
+
+            //Count of all Numbers
+            int countOfAllNumbers = Numbers.Count();
+            int countOfAllEvenNumbers = Numbers.Where(x => x % 2 == 0).Count();
+
+            //Average of all Numbers
+            double averageOfAllNumbers = Numbers.Average();
+            double averageOfAllEvenNumbers = Numbers.Where(x => x % 2 == 0).Average();
+
+            
             Console.WriteLine("---------------------------xxxxx--------------------------------------xxxxxxx----------------------------- ");
+            // Agregate function 
+            string[] countries = { "USA","CANADA","MEXICO" };
 
-            //Other example using Where which is a extension method in IEnumerable<T>
-            // in order to exten you need to make static and the parameter type need to proceed with this
-            List<int> listnum= new List<int>() {1,2,3,4,5,6,7,8,9,10 };
-            IEnumerable<int> numbers = Enumerable.Where(listnum, n => n % 2 == 0);
-            foreach (int number in numbers) 
-            {
-                Console.WriteLine("Using Ienumberabl and using Where clause as extenstion while passing source {0} ", number);
-            }
+            string result = countries.Aggregate((a, b) => a + "," + b);
 
+            Console.WriteLine(result);
+
+            int[] Num = { 1, 2, 3, 4, 5 };
+            int resultNum = Num.Aggregate((a,b) => a * b);
+
+
+            Console.WriteLine(resultNum);
             Console.ReadLine();
         }
 
-        
+
     }
 }
