@@ -16,11 +16,13 @@ namespace LINQ_AtoZ
         static void Main(string[] args)
         {
             //SelectMany logic 
-            SelectMany.GetSelectManyData();
+            //SelectMany.GetSelectManyData();
+            
+            //Ordering Operators
+            OrderingOperators.GetAllOrderingOperators();
 
             Console.ReadLine();
-        }
-      
+        }     
 
 
     }
