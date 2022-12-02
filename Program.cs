@@ -22,11 +22,17 @@ namespace LINQ_AtoZ
             //OrderingOperators.GetAllOrderingOperators();
 
             //Partition operator
-            PartitionOperators.SkipTake();
+            //PartitionOperators.SkipTake();
+
+            //ConverstionOperators Operator
+            ConverstionOperators.GetConverstionOperators();
+
 
             Console.ReadLine();
         }     
 
 
     }
+
+
 }
