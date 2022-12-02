@@ -17,9 +17,12 @@ namespace LINQ_AtoZ
         {
             //SelectMany logic 
             //SelectMany.GetSelectManyData();
-            
+
             //Ordering Operators
-            OrderingOperators.GetAllOrderingOperators();
+            //OrderingOperators.GetAllOrderingOperators();
+
+            //Partition operator
+            PartitionOperators.SkipTake();
 
             Console.ReadLine();
         }     
