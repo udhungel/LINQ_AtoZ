@@ -19,5 +19,6 @@ namespace LINQ_AtoZ
         public string City { get; set; }
         public Nullable<int> departmentId { get; set; }
         public int EmployeeId { get; set; }
+        public Nullable<int> Salary { get; set; }
     }
 }
