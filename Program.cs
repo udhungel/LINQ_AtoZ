@@ -25,7 +25,9 @@ namespace LINQ_AtoZ
             //PartitionOperators.SkipTake();
 
             //ConverstionOperators Operator
-            ConverstionOperators.GetConverstionOperators();
+            //ConverstionOperators.GetConverstionOperators();
+            //Get Lookup Converstion operator 
+            ConversionOperatorLookup.GetLookup();
 
 
             Console.ReadLine();
