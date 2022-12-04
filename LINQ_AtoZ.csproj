@@ -85,7 +85,9 @@
       <DependentUpon>Employee.edmx</DependentUpon>
     </Compile>
     <Compile Include="GroupBy.cs" />
+    <Compile Include="GroupByMultipleKeys.cs" />
     <Compile Include="Interface\IGroupBy.cs" />
+    <Compile Include="Interface\IGroupByMultipleKeys.cs" />
     <Compile Include="Model\Student.cs" />
     <Compile Include="OrderingOperators.cs" />
     <Compile Include="PartitionOperators.cs" />

@@ -21,13 +21,17 @@ namespace LINQ_AtoZ
 
             //Dependency injection
             var serviceProvider = new ServiceCollection()
-                .AddSingleton<IGroupBy, GroupBy>() 
+                .AddSingleton<IGroupBy, GroupBy>()
+                .AddSingleton<IGroupByMultipleKeys, GroupByMultipleKeys>()
                 .AddScoped<EmployeeDBContext, EmployeeDBContext>()
                 .BuildServiceProvider();
+           
 
-            
+
             //Get the required service
+            // var getService = serviceProvider.GetService<IGroupBy>();
             var getService = serviceProvider.GetService<IGroupBy>();
+            var getServiceForMultipleGroupby = serviceProvider.GetService<IGroupByMultipleKeys>();
 
 
 
@@ -45,9 +49,13 @@ namespace LINQ_AtoZ
             //Get Lookup Converstion operator 
             //ConversionOperatorLookup.GetLookup();
 
-            //Group by 
+            //Group by Part 11 
 
-            getService.GetAllGroups();
+           // getService.GetAllGroups();
+            getServiceForMultipleGroupby.GetAllMulitpleGroups();
+
+            //Group by Multiple Keys Part 12
+            //getService.GetAllMulitpleGroups;
 
             Console.ReadLine();
         }     
