@@ -20,3 +20,8 @@
 /packages/Microsoft.Bcl.AsyncInterfaces.7.0.0/buildTransitive/net462
 /packages/Microsoft.Bcl.AsyncInterfaces.7.0.0/buildTransitive/net461
 /packages/Microsoft.Bcl.AsyncInterfaces.7.0.0
+/obj/Debug/edmxResourcesToEmbed/Employee.csdl
+/obj/Debug/edmxResourcesToEmbed/Employee.ssdl
+/obj/Debug/edmxResourcesToEmbed/Employee.msl
+/obj/Debug/TempPE/Employee.cs.dll
+/obj/Debug/TempPE/Employee.Designer.cs.dll
