@@ -24,6 +24,7 @@ namespace LINQ_AtoZ
                 .AddSingleton<IGroupBy, GroupBy>()
                 .AddSingleton<IGroupByMultipleKeys, GroupByMultipleKeys>()
                 .AddSingleton<IElementOperators, ElementOperators>()
+                .AddSingleton<IGroupJoin, GroupJoin>()
 
 
                 .AddScoped<EmployeeDBContext, EmployeeDBContext>()
@@ -36,6 +37,8 @@ namespace LINQ_AtoZ
             var getService = serviceProvider.GetService<IGroupBy>();
             var getServiceForMultipleGroupby = serviceProvider.GetService<IGroupByMultipleKeys>();
             var getServiceForElementOperators = serviceProvider.GetService<IElementOperators>();
+
+            var getServiceForGroupJoin = serviceProvider.GetService<IGroupJoin>();
 
 
 
@@ -59,10 +62,12 @@ namespace LINQ_AtoZ
             // getServiceForMultipleGroupby.GetAllMulitpleGroups();
 
             //Group by Multiple Keys Part 12
-            getServiceForElementOperators.GetElementsOperators();
+            //getServiceForElementOperators.GetElementsOperators();
+
+            //GroupJoin 13 
 
             //Element Operators Part 13 
-            
+            getServiceForGroupJoin.getGroupJoin();
 
             Console.ReadLine();
         }     
