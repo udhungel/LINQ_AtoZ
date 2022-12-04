@@ -69,6 +69,7 @@
   <ItemGroup>
     <Compile Include="ConversionOperatorLookup.cs" />
     <Compile Include="ConverstionOperators.cs" />
+    <Compile Include="ElementOperators.cs" />
     <Compile Include="Employee.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -86,6 +87,7 @@
     </Compile>
     <Compile Include="GroupBy.cs" />
     <Compile Include="GroupByMultipleKeys.cs" />
+    <Compile Include="Interface\IElementOperators.cs" />
     <Compile Include="Interface\IGroupBy.cs" />
     <Compile Include="Interface\IGroupByMultipleKeys.cs" />
     <Compile Include="Model\Student.cs" />
