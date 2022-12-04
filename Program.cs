@@ -26,7 +26,8 @@ namespace LINQ_AtoZ
                 .AddSingleton<IElementOperators, ElementOperators>()
                 .AddSingleton<IGroupJoin, GroupJoin>()
                 .AddSingleton<ICrossJoin, CrossJoin>()
-                
+                .AddSingleton<ISetOperators, SetOperators>()
+
 
 
                 .AddScoped<EmployeeDBContext, EmployeeDBContext>()
@@ -43,6 +44,8 @@ namespace LINQ_AtoZ
             var getServiceForGroupJoin = serviceProvider.GetService<IGroupJoin>();
 
             var getServiceForCrossJoin = serviceProvider.GetService<ICrossJoin>();
+
+            var getServiceForSetOperators = serviceProvider.GetService<ISetOperators>();
 
 
 
@@ -71,12 +74,14 @@ namespace LINQ_AtoZ
             //GroupJoin 13 
 
             //Element Operators Part 13 
-           //getServiceForGroupJoin.getGroupJoin();
+            //getServiceForGroupJoin.getGroupJoin();
 
 
             //Cross JOIN 
-            getServiceForCrossJoin.getCrossJoin();
+            //getServiceForCrossJoin.getCrossJoin();
 
+            // Set Operators 
+            getServiceForSetOperators.getSetOperators();
             Console.ReadLine();
         }     
 
