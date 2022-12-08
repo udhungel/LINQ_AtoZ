@@ -81,7 +81,15 @@ namespace LINQ_AtoZ
             //getServiceForCrossJoin.getCrossJoin();
 
             // Set Operators 
-            getServiceForSetOperators.getSetOperators();
+            //getServiceForSetOperators.getSetOperators();
+
+            //QueryArray
+            QueryArray.GetIndexofArrayValues();
+            QueryArray.checkIfExisitsInArray();
+            QueryArray.findIfExisitsInArray();
+            QueryArray.reverseArray();
+            QueryArray.copyArray();
+            QueryArray.sortArray();
             Console.ReadLine();
         }     
 
