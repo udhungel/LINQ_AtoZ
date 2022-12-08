@@ -90,6 +90,12 @@ namespace LINQ_AtoZ
             QueryArray.reverseArray();
             QueryArray.copyArray();
             QueryArray.sortArray();
+            
+
+
+            //Reverse String 
+            ReverseEachWordInString.getReverse();
+
             Console.ReadLine();
         }     
 
